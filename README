@@ -1,0 +1,4 @@
+python3 manage.py runserver
+
+go to
+localhost:8000/pytm_web/upload

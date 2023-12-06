@@ -11,11 +11,10 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        {{ svg }}
         <button type="submit">Upload</button>
     </form>
 
-    <img src="{% static 'tm.png' %}">
+    <img src="{% static 'out.png' %}">
 
 </body>
 </html>
