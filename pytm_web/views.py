@@ -44,6 +44,8 @@ def upload_file(request):
             ps = subprocess.Popen((os.path.join(DIR, 'scripts', 'tm.py'), '--dfd'), stdout=subprocess.PIPE)
             _  = subprocess.check_output(('dot', '-Tpng', '-o', os.path.join(DIR, 'static', 'out.png')), stdin=ps.stdout)
 
+            # os.remove(os.path.join(DIR, 'static', 'out.png'))
+
             # then render the new page
             return render(request, 'pytm_web/upload.html', {'fileform': fileform})
 
