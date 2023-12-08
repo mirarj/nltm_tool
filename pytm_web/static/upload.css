@@ -4,10 +4,12 @@ body {
 
 h2 {
     color: #3E8EDE;
+    padding-left: 20px;
 }
 
 #menuBar {
     width: 100%;
+
     border-bottom-style: solid;
     border-bottom-width: thin;
     border-bottom-color: #646464;

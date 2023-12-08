@@ -25,12 +25,14 @@ def upload_file(request):
             # did they submit a file?
             if 'inputFile' in request.FILES.keys():
                 # then get the file
+                print("DEBUG >>>> using FILE")
                 tm_file = request.FILES['inputFile'].file
             
             # # or did they submit via the textbox?
             else:
                 # then get the text and treat it like a file
-                tm_file = io.BytesIO(("#!/usr/bin/env python3\n" + request.POST['inputText']).encode('ascii'))
+                print("DEBUG >>>> using TEXT")
+                tm_file = io.BytesIO((request.POST['inputText']).replace('\r', '').encode('ascii'))
 
             # now save whatever they gave us to our own local file...
             DIR = os.path.dirname(__file__)
