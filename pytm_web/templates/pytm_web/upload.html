@@ -1,5 +1,7 @@
 {% load static %}
 
+<link rel="stylesheet" href="{% static 'upload.css' %}">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +9,38 @@
 <head>
 <body>
 
-    <h2>Upload DFD File</h2>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
+    <div id = 'menuBar'>
+        <h2>Threat Modeling Tool</h2>
+        <div class="topnav">
+            <a href="#share">Share</a>
+            <a href="#export">Export</a>
+            <a href="#profile">Profile</a>
+        </div>
+    </div>
 
-    <img src="{% static 'out.png' %}">
+    
+
+    <div class="flex-parent">
+        <div class="flex-child">
+
+            <form method="post" class = "createDFD" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ fileform.as_p }}
+                <font size="-1">NOTE: Uploading a file will overwrite whatever is in your textbox!</font>
+                <br>
+                <button type="submit">Render it!</button>
+            </form>
+
+        </div>
+        <div class="flex-child">
+    
+            <img class = "dfd" src="{% static 'out.png' %}" style = "display:inline">
+
+        </div>
+    </div>
+
+
+    
 
 </body>
 </html>

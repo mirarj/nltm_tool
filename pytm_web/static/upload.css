@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+}
+
+h2 {
+    color: #3E8EDE;
+}
+
+#menuBar {
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    border-bottom-color: #646464;
+}
+
+.flex-parent {
+    display: flex;
+    width: 100%;
+}
+
+.flex-child {
+    flex: 1;
+    margin: 5px;
+}
+
+.topnav {
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: #333; */
+    color: white;
+    padding: 10px;
+}
+
+.topnav a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #3E8EDE; 
+    color: white; 
+    border-radius: 5px; 
+    margin-right: 10px;
+}
